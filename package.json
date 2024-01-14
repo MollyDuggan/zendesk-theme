@@ -8,8 +8,8 @@
     "preview": "zat theme preview",
     "prettier:check": "prettier --check \"./**/*.{js,json,scss,md}\"",
     "prettier:write": "prettier --write \"./**/*.{js,json,scss,md}\"",
-    "styles:watch": "sass styles/index.scss:style.css --watch",
-    "styles:build": "sass styles/index.scss:style.css --style compressed && postcss style.css --use autoprefixer --replace --no-map"
+    "styles:watch": "sass styles/index.scss:style.css --watch --source-map",
+    "styles:build": "sass styles/index.scss:style.css --style compressed --source-map && postcss style.css --use autoprefixer --replace --no-map"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.7",

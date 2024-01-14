@@ -1,6 +1,6 @@
-# Evoko theme for Zendesk Guide
+# Molly Duggan theme for Zendesk Guide
 
-This repo contains the [Evoko support frontend](https://support.evoko.se/hc/en-us) running on the Zendesk Guide platform.
+This repo contains the [Molly Duggan support frontend](https://support.mollyduggan.com/hc/en-us) running on the Zendesk Guide platform.
 
 The theme is based of the default [Zendesk Copenhagen theme](https://github.com/zendesk/copenhagen_theme) which is designed to be responsive and accessible. Check out the [Using themes and customizing your Help Center](https://support.zendesk.com/hc/en-us/sections/206670747) section and [developer documentation](https://developer.zendesk.com/apps/docs/help-center-templates/introduction) to learn more.
 
@@ -109,15 +109,16 @@ And this would look for a file inside the [`settings/`](settings/) folder named 
 
 You can use your favorite IDE to develop and preview your changes locally in a web browser using the Zendesk Apps Tools (ZAT) which is installed as a Ruby gem. For more details, see [Previewing theme changes locally](https://support.zendesk.com/hc/en-us/articles/115012793547).
 
-To avoid having to enter your Zendesk credentials every time you start your development environment you can create a `.zat` file in the project root which contains your credentials in json format, for example like this:
+To avoid having to enter your Zendesk credentials every time you start your development environment you can create a `zcli.apps.config.json` file in the project root which contains your credentials in json format, for example like this:
 
 ```json
 {
   "subdomain": "erm",
-  "username": "john.doe@evoko.se/token",
+  "username": "john.doe@mollyduggan.se/token",
   "password": "YOUR_API_TOKEN"
 }
 ```
+Preview application: `zcli themes:preview`
 
 Once you have ZAT setup make sure [Node.js](https://nodejs.org/) is installed and then use the below commands:
 
@@ -135,5 +136,5 @@ For deploying changes to production we use the [Zendesk GitHub integration](http
 
 1. Increment the `version` in [`manifest.json`](manifest.json) (without this Zendesk won't recognize an update).
 2. Commit your changes and merge your branch to the main branch.
-3. In the [Zendesk Guide theming center](https://support.evoko.se/theming) press **Update from GitHub**.
+3. In the [Zendesk Guide theming center](https://support.mollyduggan.com/theming) press **Update from GitHub**.
 4. Changes should now be live! 🎉
